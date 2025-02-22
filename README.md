@@ -51,7 +51,7 @@ The backend is built using **Node.js** and **Express.js** with a **MongoDB datab
 
 2. **Visit:**
    ```
-   http://localhost:3000
+   http://localhost:5000
    ```
    to access the application.
 
