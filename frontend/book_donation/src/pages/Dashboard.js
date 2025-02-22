@@ -127,7 +127,7 @@ const Dashboard = () => {
                             <td>{book.year}</td>
                             <td>{book.ISBN}</td>
                             <td><img src={book.imageUrl} alt="Book Cover" className="book-image" /></td>
-                            <td>
+                            <td style={{display:'flex'}}>
                                 <button className="edit-btn" onClick={() => handleEdit(book)}>Edit</button>
                                 <button className="delete-btn" onClick={() => handleDelete(book._id)}>Delete</button>
                             </td>
