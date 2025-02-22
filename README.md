@@ -18,12 +18,12 @@ The project is built using **MERN Stack** (MongoDB, Express.js, React.js, and No
 The backend is built using **Node.js** and **Express.js** with a **MongoDB database**.
 ---
 # Dependencies used and The reason for useing it:-
- 1.bcryptjs :- bcryptjs is used for password hashing ,security and Password Verification.
- 2.Cors :- It allow's the frontend to communicate with the backend from a different origin.
- 3.dotenv:- It loads environment variables from a .env file to keep sensitive data secure.
- 4.express:- It is a Web framework for Node.js, used to create API routes and handle HTTP requests.
- 5.jsonwebtoken:- It Implements authentication by generating and verifying JWT tokens for user sessions.
- 6.mongoose: It is a library for MongoDB, providing easy interaction with the database.
+ 1. bcryptjs :- bcryptjs is used for password hashing ,security and Password Verification.
+ 2. Cors :- It allow's the frontend to communicate with the backend from a different origin.
+ 3. dotenv:- It loads environment variables from a .env file to keep sensitive data secure.
+ 4. express:- It is a Web framework for Node.js, used to create API routes and handle HTTP requests.
+ 5. jsonwebtoken:- It Implements authentication by generating and verifying JWT tokens for user sessions.
+ 6. mongoose: It is a library for MongoDB, providing easy interaction with the database.
 
 ## Installation
 ### Prerequisites
