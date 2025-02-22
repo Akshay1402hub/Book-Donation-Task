@@ -20,6 +20,9 @@ const app = express();
 app.use(express.json());
 app.use(cors()); // It is used to connect frontend and backend 
 
+app.use(express.static('build'));
+
+
 
 connectDB();
 
@@ -68,5 +71,11 @@ app.delete('/api/books/:id', auth, async (req, res) => {
     res.json({ message: 'Book deleted successfully' });
 });
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+

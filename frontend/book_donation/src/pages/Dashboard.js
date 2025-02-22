@@ -20,7 +20,7 @@ const Dashboard = () => {
     }, []);
 
     function getBooks() {
-        axios.get("http://localhost:5000/api/books")
+        axios.get("/api/books")
             .then(res => setBooks(res.data))
             .catch(err => console.log("Error:", err));
     }
@@ -32,14 +32,14 @@ const Dashboard = () => {
         const headers = { Authorization: token };
 
         if (editId) {
-            axios.put(`http://localhost:5000/api/books/${editId}`, bookData, { headers })
+            axios.put(`/api/books/${editId}`, bookData, { headers })
                 .then(() => {
                     getBooks();
                     resetForm();
                 })
                 .catch(err => console.log("Edit error:", err));
         } else {
-            axios.post("http://localhost:5000/api/books", bookData, { headers })
+            axios.post("/api/books", bookData, { headers })
                 .then(() => {
                     getBooks();
                     resetForm();
@@ -60,7 +60,7 @@ const Dashboard = () => {
 
     function handleDelete(id) {
         const token = localStorage.getItem("token");
-        axios.delete(`http://localhost:5000/api/books/${id}`, { headers: { Authorization: token } })
+        axios.delete(`/api/books/${id}`, { headers: { Authorization: token } })
             .then(() => getBooks())
             .catch(err => console.log("Delete error:", err));
     }
